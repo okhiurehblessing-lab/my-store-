@@ -1,0 +1,3 @@
+[build]
+  command = "npm install react-icons react-router-dom && npm run build"
+  publish = "build"
