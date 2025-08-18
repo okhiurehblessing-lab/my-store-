@@ -1,0 +1,4 @@
+/* src/styles.css - small tweaks */
+body { margin: 0; background: #fff; color: #0b1220; }
+img { max-width: 100%; display:block; }
+.ant-layout { background: #fff; }
