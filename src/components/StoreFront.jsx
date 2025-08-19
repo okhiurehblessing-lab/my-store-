@@ -8,8 +8,8 @@ import {
   Stack, Radio, Badge, Spinner
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { FiShoppingCart, FiUser } from "react-icons/fi";
-import { FiWhatsapp } from "react-icons/fi";
+import { FiShoppingCart, FiSearch, FiX, FiChevronLeft, FiChevronRight, FiSettings } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 import { db } from "../firebase";
 import {
   collection, doc, onSnapshot, query, orderBy, addDoc, getDoc, updateDoc, serverTimestamp
