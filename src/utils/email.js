@@ -1,16 +1,16 @@
 // src/utils/email.js
 import emailjs from "emailjs-com";
 
-export const EMAIL_PUBLIC_KEY = "RN5H1CcY7Fqkakg5w";
-export const EMAIL_SERVICE_ID = "service_opcf6cl";
-export const TEMPLATE_ADMIN = "template_4zrsdni";
-export const TEMPLATE_CUSTOMER = "template_zc87bdl";
+const SERVICE_ID = "service_opcf6cl";
+const TEMPLATE_CUSTOMER = "template_4zrsdni";
+const TEMPLATE_ADMIN = "template_zc87bdl";
+const PUBLIC_KEY = "RN5H1CcY7Fqkakg5w";
 
-emailjs.init(EMAIL_PUBLIC_KEY);
+emailjs.init(PUBLIC_KEY);
 
-export async function sendAdminOrderEmail(payload){
-  return emailjs.send(EMAIL_SERVICE_ID, TEMPLATE_ADMIN, payload);
+export async function sendCustomerOrderEmail(vars) {
+  return emailjs.send(SERVICE_ID, TEMPLATE_CUSTOMER, vars);
 }
-export async function sendCustomerOrderEmail(payload){
-  return emailjs.send(EMAIL_SERVICE_ID, TEMPLATE_CUSTOMER, payload);
+export async function sendAdminOrderEmail(vars) {
+  return emailjs.send(SERVICE_ID, TEMPLATE_ADMIN, vars);
 }
