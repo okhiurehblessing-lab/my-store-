@@ -1,9 +1,7 @@
 // src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
 
-// <-- Use the firebase config you provided earlier -->
 const firebaseConfig = {
   apiKey: "AIzaSyBkQ5oE3LaiFGa2ir98MKjZzJ_ZTWQ08Cc",
   authDomain: "myshop-store-bbb1b.firebaseapp.com",
@@ -15,5 +13,3 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-export const auth = getAuth(app);
-export default app;
