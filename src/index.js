@@ -1,22 +1,17 @@
-// src/index.js
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import App from "./App";
-import "./styles.css";
+import { SettingsProvider } from "./context/SettingsContext";
 
-const theme = extendTheme({
-  fonts: {
-    heading: `'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`,
-    body: `'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`
-  }
-});
-
-createRoot(document.getElementById("root")).render(
-  <ChakraProvider theme={theme}>
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <ChakraProvider>
     <BrowserRouter>
-      <App />
+      <SettingsProvider>
+        <App />
+      </SettingsProvider>
     </BrowserRouter>
   </ChakraProvider>
 );
