@@ -514,7 +514,7 @@ export default function StoreFront() {
       {settings.whatsapp && (
         <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noreferrer">
           <Box position="fixed" right="16px" bottom="16px" bg="#25D366" w="56px" h="56px" borderRadius="full" display="grid" placeItems="center" boxShadow="lg">
-            <FiWhatsapp size={22} color="#fff" />
+            <FaWhatsapp size={22} color="green" />
           </Box>
         </a>
       )}
