@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { auth } from "./firebase";  // your firebase.js config
 import { onAuthStateChanged } from "firebase/auth";
 
-import Storefront from "./pages/Storefront";
+import Storefront from "./pages/Storefront.jsx";
 import AdminLogin from "./pages/AdminLogin";
 import AdminPanel from "./pages/AdminPanel";
 import WhatsAppFloat from "./components/WhatsAppFloat"; // 👈 import your float
