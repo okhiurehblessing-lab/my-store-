@@ -16,8 +16,8 @@ import {
 } from "firebase/firestore";
 import { sendAdminOrderEmail, sendCustomerOrderEmail } from "../utils/email";
 
-const CLOUD_NAME = "desbqctik";        // update if you changed cloud name
-const UPLOAD_PRESET = "myshop_preset"; // update if you changed preset
+const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
 
 const formatN = (n) => "₦" + (Number(n || 0)).toLocaleString();
 
