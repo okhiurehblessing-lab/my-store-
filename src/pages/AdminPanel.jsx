@@ -13,8 +13,8 @@ import {
 import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import { sendAdminOrderEmail, sendCustomerOrderEmail } from "../utils/email";
 
-const CLOUD_NAME = "desbqctik";
-const UPLOAD_PRESET = "myshop_preset";
+const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const UPLOAD_PRESET = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
 
 // Helper: upload single file to Cloudinary, returns secure_url
 async function uploadToCloudinary(file) {
