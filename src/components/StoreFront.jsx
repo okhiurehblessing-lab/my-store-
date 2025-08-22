@@ -34,8 +34,8 @@ import { db } from "../firebase";
 import { v4 as uuidv4 } from "uuid";
 
 // Cloudinary config
-const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
+const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
+const uploadPreset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET;
 
 // Upload helper
 async function uploadToCloudinary(file) {
