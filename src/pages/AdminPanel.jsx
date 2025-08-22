@@ -13,8 +13,8 @@ import {
 import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import { sendAdminOrderEmail, sendCustomerOrderEmail } from "../utils/email";
 
-const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-const UPLOAD_PRESET = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
+const CLOUD_NAME = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
+const UPLOAD_PRESET = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET;
 
 // Upload helper
 async function uploadToCloudinary(file) {
